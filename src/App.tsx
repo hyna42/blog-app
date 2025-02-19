@@ -5,6 +5,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Single from "./pages/Single";
+import Header from "./components/Header";
+import { Button } from "@/components/ui/button"
 
 function App() {
   const { page } = useHashNavigation();
@@ -15,12 +17,16 @@ function App() {
       <a href="#" className="text-red-400">
         Home
       </a>
-      
+
       <a href="#post">Articles</a>
       <a href="#contact">Contact</a>
-      <a href="#contact" className="text-red-400">Contact</a>
+      <a href="#contact">
+        Contact
+      </a>
 
       {pageContent}
+      <Header />
+      <Button className="m-4">Click me</Button>
     </>
   );
 }
