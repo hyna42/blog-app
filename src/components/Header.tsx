@@ -1,8 +1,8 @@
-// import { Button } from "./ui/button";
+import Navbar from "./Navbar";
 
 const Header = () => {
   //   return <Button />;
-  return <p>Header</p>;
+  return <Navbar />;
 };
 
 export default Header;
