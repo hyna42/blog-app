@@ -24,7 +24,7 @@ const Navbar = () => {
     <nav className="flex items-center justify-between p-4 border-b bg-white relative">
       {/* Bouton "Mon Site" */}
       <Button variant="ghost" className="text-lg font-bold">
-        Mon Site
+        MonSite
       </Button>
 
       {/* Menu en mode desktop (visible à partir de md) */}

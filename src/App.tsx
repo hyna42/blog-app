@@ -1,18 +1,18 @@
 import "./App.css";
 import "./index.css";
-import { useHashNavigation } from "./hooks/useHashNavigation";
+import { Toaster } from "sonner";
 
-// import Header from "./components/Header";
-import { getPageContent } from "./utils/getPageContent";
 import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
-  const { page } = useHashNavigation();
-  const pageContent = getPageContent(page);
+
   return (
     <>
       {<Header />}
-      {pageContent}
+      <Toaster position="top-right" expand richColors />
+      {<Home />}
+      {/* {pageContent} */}
     </>
   );
 }

@@ -1,7 +1,36 @@
-const Home = () => {
-    return (<>
-    <h1>Home</h1>
-    </>)
-}
+import Alert from "@/components/Alert";
+import PostCard from "@/components/Card";
+import Spinner from "@/components/Spinner";
+import { useFetch } from "@/hooks/useFetch";
 
-export default Home
+const Home = () => {
+  const { data, loading, error } = useFetch(
+    "https://jsonplaceholder.typicode.com/posts?_limit=10"
+  );
+  console.log("data", data, loading, error);
+  return (
+    <>
+      {loading && <Spinner />}
+      {error && <Alert message={error.message} />}
+      <h1>Mon Blog</h1>
+
+      <div className="flex">
+        {data && (
+          <div>
+            {data.map((post) => (
+              <PostCard
+                key={post.id}
+                title={post.title}
+                description={post.body}
+                href={`#post:${post.id}`}
+                buttonLabel="Voir l'article"
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
+
+export default Home;
