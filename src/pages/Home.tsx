@@ -18,12 +18,13 @@ const Home = () => {
           {/* <h1>Mon Blog</h1> */}
           {data.map((post) => (
             <PostCard
-                  key={post.id}
-                  image={`https://picsum.photos/id/${post.id}/280/180`}
+              key={post.id}
+              image={`https://picsum.photos/id/${post.id}/280/180`}
               title={post.title}
               description={post.body}
               href={`post/${post.id}`}
               buttonLabel="Voir l'article"
+              fullWidth={false} // 🔹 Cartes normales (max 350px)
             />
           ))}
         </div>
