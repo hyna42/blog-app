@@ -2,6 +2,8 @@
 
 This project is a React-based blog application developed as part of a React course. It leverages several modern technologies and libraries to provide a robust and user-friendly experience.
 
+![alt text](src/assets/screenApp.png)
+
 ## Features
 
 - **Dynamic Post Display**: Fetches and displays posts from the [JSONPlaceholder API](https://jsonplaceholder.typicode.com/).
