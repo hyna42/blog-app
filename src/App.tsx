@@ -8,7 +8,6 @@ import Home from "./pages/Home";
 import Single from "./pages/Single";
 import Contact from "./pages/Contact";
 import NewPost from "./pages/NewPost";
-import EditPostModal from "./pages/EditPostModal";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
 
           <Route path="contact" element={<Contact />} />
 
-          <Route path="post/edit/:id" element={<EditPostModal />} />
           <Route />
         </Route>
       </Routes>

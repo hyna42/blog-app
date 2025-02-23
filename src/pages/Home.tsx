@@ -13,12 +13,13 @@ const Home = () => {
 
   return (
     <>
+       <h1 className="w-full text-center text-3xl font-bold my-4">Mon Blog</h1>
       {loading && <Spinner />}
       {error && <Alert message={error.message} />}
       {data && (
         <div className="flex flex-wrap justify-center gap-3 p-3">
-          {/* <h1>Mon Blog</h1> */}
-
+         
+        
           {data.map((post) => (
             <div className="mb-4" key={post.id}>
               <PostCard
