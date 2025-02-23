@@ -2,30 +2,29 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
+  // CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
 
-type Cardprops = {
+type PostCardProps = {
   title?: string;
   description?: string;
   image?: string;
   href?: string;
+  fullWidth?: boolean;
   buttonLabel?: string;
-  fullWidth?: boolean; // Ajoute une prop pour différencier Single et Home
+  buttonComponentAction?: React.ReactNode;
 };
 
 const PostCard = ({
   image,
   title,
   description,
-  href,
-  buttonLabel,
+  // href,
+  // buttonLabel,
   fullWidth = false, // Par défaut, les cartes sont petites
-}: Cardprops) => {
+}: PostCardProps) => {
   return (
     <Card
       className={`w-full ${
@@ -47,14 +46,14 @@ const PostCard = ({
           {description}
         </CardDescription>
       </CardContent>
-
+      {/* 
       <CardFooter className="mt-auto">
         <Link to={href ? href : "#"} className="w-full">
           <Button className="w-full bg-sky-800 hover:bg-amber-600 text-white">
             {buttonLabel}
           </Button>
         </Link>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   );
 };
