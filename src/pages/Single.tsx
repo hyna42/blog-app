@@ -1,7 +1,12 @@
-const Single = () => {
-    return (<>
-    <h1>Single</h1>
-    </>)
-}
+import { useParams } from "react-router";
 
-export default Single
+const Single = () => {
+  const { id } = useParams<{ id: string }>();
+  return (
+    <>
+      <h1>ID du post == {id}</h1>
+    </>
+  );
+};
+
+export default Single;

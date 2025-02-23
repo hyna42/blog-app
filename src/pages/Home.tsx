@@ -18,10 +18,11 @@ const Home = () => {
           {/* <h1>Mon Blog</h1> */}
           {data.map((post) => (
             <PostCard
-              key={post.id}
+                  key={post.id}
+                  image={`https://picsum.photos/id/${post.id}/280/180`}
               title={post.title}
               description={post.body}
-              href={`#post:${post.id}`}
+              href={`post/${post.id}`}
               buttonLabel="Voir l'article"
             />
           ))}

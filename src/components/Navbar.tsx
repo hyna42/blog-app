@@ -17,33 +17,33 @@ import {
 
 import { Button } from "./ui/button";
 import { Menu } from "lucide-react"; // Icônes pour burger
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-
   return (
     <nav className="flex items-center justify-between p-4 border-b bg-white relative">
       {/* Bouton "Mon Site" */}
-      <Button variant="ghost" className="text-lg font-bold">
-        MonSite
-      </Button>
+      <Link to="/">
+        <Button variant="ghost" className="text-lg font-bold">
+          MonSite
+        </Button>
+      </Link>
 
       {/* Menu en mode desktop (visible à partir de md) */}
       <Menubar className="hidden md:flex space-x-4">
         <MenubarMenu>
           <MenubarTrigger>
-            <a href="#post">Articles</a>
+            <Link to="/">Home</Link>
           </MenubarTrigger>
         </MenubarMenu>
-
         <MenubarMenu>
           <MenubarTrigger>
-            <a href="#">Home</a>
+            <Link to="post/new">Poster un acrticle</Link>
           </MenubarTrigger>
         </MenubarMenu>
-
         <MenubarMenu>
           <MenubarTrigger>
-            <a href="#contact">Contact</a>
+            <Link to="contact">Contact</Link>
           </MenubarTrigger>
           <MenubarContent>
             <MenubarRadioGroup>
@@ -54,8 +54,6 @@ const Navbar = () => {
           </MenubarContent>
         </MenubarMenu>
       </Menubar>
-
-  
 
       {/* Menu mobile (visible uniquement si open est true) */}
 
